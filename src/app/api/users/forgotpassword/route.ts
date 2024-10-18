@@ -43,8 +43,6 @@ import User from "@/models/userModel";
 import { NextRequest, NextResponse } from "next/server";
 import { sendEmail } from "@/helpers/mailer";
 
-
-
 export async function POST(request: NextRequest) {
   try {
     const reqBody = await request.json();
