@@ -24,15 +24,27 @@ export default function ChangePassword() {
   console.log(window.location.hostname);
   
   
-  const [user, setUser] = useState({
-    token:"",
-    newpassword: "",
-    confirmpassword: "",
-    tenantId:result
-  });
-
-  console.log(user);
+ 
   
+  function extractToken(inputString)
+   { // Split the input string at "Token" 
+    const tokens = inputString.split("token");
+     // Trim and return the first part if it exists 
+     return tokens[0].trim() || ''; } // Example usage with a single input string 
+     const inputString = suBurl;
+      const output = extractToken(inputString);
+     
+      console.log(output);
+      
+
+      const [user, setUser] = useState({
+        token:"",
+        newpassword: "",
+        confirmpassword: "",
+        tenantId:output
+      });
+    
+      console.log(user);
 
   const [isChanged, setChanged] = useState(false);
   const [error, setError] = useState(false);
